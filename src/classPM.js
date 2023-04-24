@@ -7,7 +7,7 @@ export default class ProductManager {
     // Definimos el Path que van a tener los Archivos
     constructor() {
 
-        this.path = "./files/products.JSON"
+        this.path = "./src/files/products.JSON"
         
     };
     
@@ -25,10 +25,11 @@ export default class ProductManager {
             const product = {
                 title,
                 description,
-                price,
+                price:price*1,
                 thumbnail,
                 code,
-                stock,
+                stock:stock*1,
+                status: true,
             };
 
 
@@ -66,7 +67,7 @@ export default class ProductManager {
 
             if(!fs.existsSync(this.path)) {
 
-            await fs.promises.writeFile("./files/products.JSON", JSON.stringify([], null, "\t"));
+            await fs.promises.writeFile(this.path, JSON.stringify([], null, "\t"));
 
             };
 
@@ -92,7 +93,7 @@ export default class ProductManager {
             }
 
             else {
-                return console.log("Not found");
+                return 404;
             }
 
         } catch (err) {console.log(err);};
