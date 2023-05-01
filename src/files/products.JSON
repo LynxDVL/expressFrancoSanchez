@@ -1,0 +1,38 @@
+[
+	{
+		"title": "Whey Protein 2lb Vainilla",
+		"description": "Proteína en polvo de 2 libras sabor vainilla, de facil disolución.",
+		"price": 6500,
+		"code": "wpv2lb",
+		"stock": 25,
+		"status": true,
+		"id": 1
+	},
+	{
+		"title": "Whey Protein 2lb Frutilla",
+		"description": "Proteína en polvo de 2 libras sabor Frutilla, de facil disolución.",
+		"price": 6000,
+		"code": "wpf2lb",
+		"stock": 20,
+		"status": true,
+		"id": 2
+	},
+	{
+		"title": "Whey Protein 2lb Chocolate",
+		"description": "Proteína en polvo de 2 libras sabor Chocolate, de facil disolución.",
+		"price": 7000,
+		"code": "wpc2lb",
+		"stock": 30,
+		"status": true,
+		"id": 3
+	},
+	{
+		"title": "Whey Protein 2lb Coookies n Cream",
+		"description": "Proteína en polvo de 2 libras sabor Cookies n Cream, muy rica!",
+		"price": 8000,
+		"code": "wpcnc2lb",
+		"stock": 30,
+		"status": true,
+		"id": 4
+	}
+]

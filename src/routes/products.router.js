@@ -1,6 +1,6 @@
 //  Importaciones y declaraciones principales
 import { Router } from "express";
-import ProductManager from "../classPM.js";
+import ProductManager from "../managers/classPM.js";
 
 const router = Router();
 
@@ -32,9 +32,12 @@ const context = async() => {
         await res.send(result);
     });
 
+    //  Publicar producto, ahora emitiendo señal para actualizar en realTIME
     router.post("/", async(req, res)=>{
         const product = await req.body; 
         await productManager.addProduct(product);
+        const products = await productManager.getProducts();
+        await req.io.emit("products", products);
         res.send({status:"success", message:"Product added"});
     });
 
@@ -48,6 +51,8 @@ const context = async() => {
     router.delete("/:pid", async(req, res)=>{
         const productID = await Object.values(req.params);
         await productManager.deleteProduct(productID[0]*1);
+        const products = await productManager.getProducts();
+        await req.io.emit("products", products);
         res.send({status:"success", message:"Product deleted"});
     });
 }

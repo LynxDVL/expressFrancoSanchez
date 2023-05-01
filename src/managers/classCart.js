@@ -1,6 +1,7 @@
 //  Invocación de FileSystem
 import fs from "fs";
 import ProductManager from "./classPM.js";
+import __dirname from "../utils.js";
 
 
 // Creacion de la Clase CartManager
@@ -8,7 +9,7 @@ export default class CartManager {
 
     // Definimos el Path que van a tener los Archivos
     constructor() {
-        this.path = "./src/files/carts.JSON"
+        this.path = `${__dirname}/files/carts.JSON`
         
     };    
 

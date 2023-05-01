@@ -1,5 +1,6 @@
 //  Invocación de FileSystem
 import fs from "fs";
+import __dirname from "../utils.js";
 
 // Creacion de la Clase ProductManager
 export default class ProductManager {
@@ -7,7 +8,7 @@ export default class ProductManager {
     // Definimos el Path que van a tener los Archivos
     constructor() {
 
-        this.path = "./src/files/products.JSON"
+        this.path = `${__dirname}/files/products.JSON`
         
     };
     

@@ -1,8 +1,27 @@
 # expressFrancoSanchez¿
 Esta es mi primera entrega, está bien completo, hay que crear los productos y los carritos!
 
+#                                   1/05/2023
+
+Nuevos métodos para POSTMAN, los GETS SON LOS SIGUIENTES PARA UTILIZACIÓN DE WEBSOCKETS Y HANDLEBARS:
+* GET: http://localhost:8082 (La ruta base, Muestra la lista de productos con la ayuda de HANDLEBARS)
+* GET: http://localhost:8082/realtimeproducts (Esta ruta, es igual que la anterior pero ahora es DINÁMICA, cada vez que intenten agregar o eliminar un producto se actualizara en *TIEMPO REAL*)
+
+Información Importante:
+* Se agregaron Emits en products.router, en las secciones de Agregar y Eliminar un producto.
+* Middleware en app.js que permite la función de arriba, y abrimos la escucha de peticiónes mediante Socket en app.js
+* Definimos public static, para crear realTimeProducts.js, que es el ejecutor de las peticiones del SOCKET
+* Archivos de tipo handlebars que son usados en los nuevos métodos!
+* Utils.js que define nuestro nuevo PATH, para con el usarlo a comodidad.
+
+
+
+
+
+#                                   24/04/2023
+
 Los metodos para los Carritos son los siguentes en POSTMAN: (Hay que crear los productos también).
-* POST: http://localhost:8082/api/carts (Crea un carito)
+* POST: http://localhost:8082/api/carts (Crea un carrito)
 * GET: http://localhost:8082/api/carts/:id de uno de los carritos creados (muestra todos los productos que hay dentro del carrito seleccionado)
 * POST: http://localhost:8082/api/carts/:idCarrito/product/:idProducto (Sí el producto existe lo agrega al carrito elegido)
 

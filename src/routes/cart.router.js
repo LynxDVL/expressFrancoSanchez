@@ -1,6 +1,6 @@
 //  Importaciones y declaraciones principales
 import { Router } from "express";
-import CartManager from "../classCart.js";
+import CartManager from "../managers/classCart.js";
 
 const router = Router();
 
